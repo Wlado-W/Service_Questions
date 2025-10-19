@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мир Квестов | WladoW</title>
+  <style>
+    /* 🌸 Общие стили */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #e6e6fa);
+      color: #333;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      color: #7a2ce0;
+      font-size: 2em;
+      font-weight: 700;
+    }
+
+    nav {
+      margin-top: 8px;
+    }
+
+    nav a {
+      color: #7a2ce0;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #c850c0;
+    }
+
+    /* 🌈 Герой-секция */
+    .hero {
+      text-align: center;
+      padding: 70px 20px 60px;
+      background: url('pic/bg_main.jpg') center/cover no-repeat;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero h2 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: #a854e9;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #7a2ce0;
+      transform: scale(1.05);
+    }
+
+    /* 💎 Разделы квестов */
+    section {
+      padding: 40px 20px;
+    }
+
+    h3.section-title {
+      text-align: center;
+      color: #7a2ce0;
+      font-size: 1.8em;
+      margin-bottom: 25px;
+    }
+
+    .quests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      padding: 0 10px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+
+    .quests-grid.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 18px;
+    }
+
+    .card-content h4 {
+      color: #7a2ce0;
+      margin: 0 0 8px;
+    }
+
+    .card-content p {
+      font-size: 0.95em;
+      color: #555;
+      min-height: 55px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      background: rgba(255,255,255,0.8);
+      font-size: 0.9em;
+      color: #666;
+      border-top: 1px solid #ddd;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌍 Мир Квестов WladoW</h1>
+  <nav>
+    <a href="#spy">Шпионские</a>
+    <a href="#love">Романтические</a>
+    <a href="#kids">Детские</a>
+    <a href="#holiday">Праздничные</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Добро пожаловать в Мир Квестов</h2>
+    <p>Выбери приключение под настроение — любовь, тайны, праздник или волшебство!</p>
+    <a href="#spy" class="btn">Начать путешествие</a>
+  </div>
+</section>
+
+<!-- 🕵️ Шпионские -->
+<section id="spy">
+  <h3 class="section-title">🕵️ Шпионские квесты</h3>
+  <div class="quests-grid">
+    <div class="card">
+      <img src="pic/spycase_preview.jpg" alt="Дело №15081992">
+      <div class="card-content">
+        <h4>Дело №15081992</h4>
+        <p>Агенты врага испортили досье. Пройди 10 заданий и восстанови данные!</p>
+        <a href="spycase/index.html" class="btn">Играть</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 💞 Романтические -->
+<section id="love">
+  <h3 class="section-title">💞 Романтические квесты</h3>
+  <div class="quests-grid">
+    <div class="card">
+      <img src="pic/wedding_preview.jpg" alt="Сердечный квест">
+      <div class="card-content">
+        <h4>Цветочный квест</h4>
+        <p>10 лепестков любви 🌸 — найди ответы и собери букет с признанием!</p>
+        <a href="flower.html" class="btn">Пройти</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🧸 Детские -->
+<section id="kids">
+  <h3 class="section-title">🧸 Детские квесты</h3>
+  <div class="quests-grid">
+    <div class="card">
+      <img src="pic/kidsquest_preview.jpg" alt="Детский квест">
+      <div class="card-content">
+        <h4>Весёлые загадки Лизы и Вики</h4>
+        <p>Красочные задания, мультяшные персонажи и призы! 🦄</p>
+        <a href="kidsquest.html" class="btn">Играть</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🎉 Праздничные -->
+<section id="holiday">
+  <h3 class="section-title">🎉 Праздничные и юбилейные</h3>
+  <div class="quests-grid">
+    <div class="card">
+      <img src="pic/birthday_preview.jpg" alt="День рождения">
+      <div class="card-content">
+        <h4>День рождения</h4>
+        <p>Праздничный квест-сюрприз с поздравлением и весёлыми заданиями 🎂</p>
+        <a href="birthday.html" class="btn">Начать</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Мир Квестов WladoW | Создано с любовью 💜
+</footer>
+
+<script>
+  // 🌸 Плавное появление карточек при прокрутке
+  const grids = document.querySelectorAll('.quests-grid');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  grids.forEach(g => observer.observe(g));
+</script>
+
+</body>
+</html>
